@@ -9,3 +9,9 @@ canvas { background:
      margin: 0 auto; 
      top:50%;
     }
+
+body{
+    background-image: url(stalin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

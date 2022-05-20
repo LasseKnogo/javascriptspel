@@ -66,6 +66,10 @@ function collisionDetection() {
           if (score == brickRowCount * brickColumnCount) {
             rounds++;
             score = 0;
+            brickColumnCount = 3;
+            brickRowCount = 5;
+            lives = 3;
+            drawBricks();
           }
         }
       }
@@ -104,21 +108,20 @@ function drawBricks() {
       }
     }
   }
-  return drawBricks;
 }
 function drawScore() {
   ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "red";
   ctx.fillText("Poäng: " + score, 8, 20);
 }
 function drawLives() {
   ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "red";
   ctx.fillText("Liv: " + lives, canvas.width - 65, 20);
 }
 function drawRounds() {
   ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "red";
   ctx.fillText("Runda: " + rounds, canvas.width - 260, 20);
 }
 
